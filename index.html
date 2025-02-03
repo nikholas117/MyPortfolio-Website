@@ -16,16 +16,24 @@
     <style></style>
   </head>
   <body>
+    
     <nav>
-      <h2 style="color: white">
-        <img src="./images/icons8-xi-50.png" alt="Logo Icon" /> Portfolio
-      </h2>
-      <div class="nav-links">
-        <a href="about-link" id="about-link">About Me</a>
-        <a href="./contact.html" class="contact-trigger">Contact Me</a>
-        <a href="#Resume" id="resume">Resume</a>
-      </div>
-    </nav>
+  <h2 style="color: white">
+    <img src="./images/icons8-xi-50.png" alt="Logo Icon" /> Portfolio
+  </h2>
+  <div class="nav-links">
+    <a href="about-link" id="about-link">About Me</a>
+    <a href="./contact.html" class="contact-trigger">Contact Me</a>
+    <a href="#Resume" id="resume">Resume</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+    
 
     <div class="hero">
       <div class="image-container">
@@ -299,7 +307,7 @@
             class="small-image"
           />
           <img
-            src="./images/C660F0D3-F3E1-49DD-9277-C327E8F02048.png"
+            src="./images/D508021E-7279-4571-BC95-ABFE9912213E.png"
             alt="iPhone Screenshot"
             class="iphone-image"
           />
@@ -313,11 +321,34 @@
       </div>
     </div>
 
-    <div class="section">
-      <h2>Open Source Contributions</h2>
-      <p>Details of contributions.</p>
+    <!-- Open Source Contributions -->
+<section class="experience">
+  <div class="experience-header">
+    <h1>Experience:</h1>
+    <h2>Open Source Contributions</h2>
+  </div>
+  
+  <div class="experience-content">
+    <div class="experience-item">
+      <h3>Project Title 1</h3>
+      <p class="project-description">This open-source project focuses on building a responsive and scalable application for managing user data. Contributed by implementing key features such as authentication, user profiles, and data visualization tools.</p>
+      <a href="https://github.com/your-repo-link" target="_blank" class="btn">View on GitHub</a>
     </div>
-
+    
+    <div class="experience-item">
+      <h3>Project Title 2</h3>
+      <p class="project-description">Contributed to an innovative project designed to enhance web accessibility and improve user experience through advanced screen reader functionality and keyboard navigation improvements.</p>
+      <a href="https://github.com/your-repo-link" target="_blank" class="btn">View on GitHub</a>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Project Title 3</h3>
+      <p class="project-description">Worked on a project for developers that allows for rapid front-end testing and ensures that the UI is robust and responsive across different devices and browsers.</p>
+      <a href="https://github.com/your-repo-link" target="_blank" class="btn">View on GitHub</a>
+    </div>
+  </div>
+</section>
+   
     <!-- CTA section  -->
     <section class="cta">
       <div class="cta-overlay"></div>
@@ -341,7 +372,7 @@
       <div class="footer-content">
         <div class="col">
           <div class="footer-divider">
-          <a href="/index.html" class="logo1"> <span class="footer-highlight-1">Portfolio</span></a>
+          <a href="./index.html" class="logo1"> <span class="footer-highlight-1">Portfolio</span></a>
           <p class="footer-text">
             <br>
           <span class="footer-highlight" style="margin-top: -10px;" >

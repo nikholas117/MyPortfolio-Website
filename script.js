@@ -43,3 +43,11 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+//Hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});

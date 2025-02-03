@@ -1075,6 +1075,7 @@ ul li::before {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .cta-overlay {
@@ -1423,7 +1424,6 @@ ul li::before {
   }
 }
 
-/* Contact Modal Container (Same Style as About Modal) */
 #contact-popup {
   width: 80%;
   height: 80%;
@@ -1489,4 +1489,140 @@ ul li::before {
 
 .contact-form button:hover {
   background-color: #b8935a;
+}
+.experience {
+  padding: 10px 40px;
+  background-color: #242222;
+  color: #e0d6c5;
+  text-align: center;
+  padding-bottom: 120px;
+  margin-bottom: 100px;
+}
+.experience h1 {
+  font-size: 3.2rem;
+}
+.experience-header h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #c9a66b;
+  font-style: italic;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.15em;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.experience-item {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #c9a66b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.experience-item h3 {
+  font-size: 1.8rem;
+  color: #c9a66b;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  color: #e0d6c5;
+  margin-bottom: 15px;
+}
+
+.experience-item .btn {
+  background-color: #c9a66b;
+  padding: 10px 20px;
+  color: #1c1c1c;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.experience-item .btn:hover {
+  background-color: #1c1c1c;
+  color: #c9a66b;
+}
+
+@media (max-width: 768px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Navigation Styles */
+.nav-links {
+  display: flex;
+  transition: transform 0.3s ease;
+  justify-content: space-around;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Show hamburger icon on smaller screens */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 95);
+    height: 50vh;
+    transform: translateX(-100%);
+
+    z-index: 999;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
 }
