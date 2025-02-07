@@ -457,6 +457,7 @@ ul li::before {
     left: auto;
     transform: none;
     margin: 100px auto;
+    margin-top: -10px;
   }
   .socials {
     top: 35%;
@@ -465,10 +466,12 @@ ul li::before {
 
   .about-text h2 {
     font-size: 1.6rem;
+    margin-top: 20px;
   }
 
   .about-text ul {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    padding-right: 10px;
   }
 
   ul li {
@@ -482,6 +485,8 @@ ul li::before {
     max-width: 100%;
     right: auto;
     text-align: center;
+    margin-top: -40px;
+    margin-bottom: -70px;
   }
 
   .small-image-container img {
