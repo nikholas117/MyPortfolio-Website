@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: "Garamond", serif;
+  font-family: "Baskerville", serif;
   background-color: #1c1c1c;
   color: #e0d6c5;
   margin: 0;
@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1.6;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 nav {
@@ -121,8 +122,9 @@ nav img {
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 45px;
+  padding: 85px;
   overflow: hidden;
+  margin-bottom: -30px;
 }
 
 .hero::before {
@@ -132,7 +134,6 @@ nav img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -282,7 +283,7 @@ button:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+
   z-index: 1;
 }
 
@@ -444,6 +445,9 @@ ul li::before {
 }
 
 @media (max-width: 480px) {
+  .image-container-1 {
+    display: none;
+  }
   .about-text {
     width: 90%;
     font-size: 0.9rem;
@@ -452,7 +456,7 @@ ul li::before {
     top: auto;
     left: auto;
     transform: none;
-    margin: 20px auto;
+    margin: 100px auto;
   }
   .socials {
     top: 35%;
@@ -595,6 +599,7 @@ ul li::before {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border: 1.5px solid #c9a66b;
+  height: 400px;
 }
 
 .small-image {
@@ -1378,13 +1383,15 @@ ul li::before {
   .navbar-footer {
     font-size: 1.5rem;
   }
+
   .col .underline {
-    height: 4px;
-    margin-bottom: 15px;
+    height: 7px;
+    margin-bottom: 20px;
+    margin-top: 7px;
   }
 
   .col .underline span {
-    width: 40px;
+    width: 20px;
   }
 }
 
