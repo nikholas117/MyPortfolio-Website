@@ -273,7 +273,9 @@ button:hover::after {
   color: white;
   overflow: hidden;
   padding-top: 50px;
-  padding-bottom: 200px;
+  padding-bottom: 120px;
+  margin-bottom: 60px;
+  margin-top: -80px;
 }
 
 .about::before {
@@ -381,24 +383,31 @@ ul li::before {
 }
 
 /* Responsive Adjustments (Only for smaller screens) */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
+  .about {
+    margin-top: -260px;
+    margin-bottom: -5px;
+  }
+  .hero {
+    margin-top: -180px;
+  }
   .about-text {
-    width: 50%;
-    padding: 25px;
-    left: 5%;
+    width: 40%;
+    padding: 20px;
+    left: 15%;
   }
 
   .about-text h2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .about-text ul {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .small-image-container {
-    right: 5%;
-    max-width: 250px;
+    right: 15%;
+    max-width: 175px;
   }
 }
 
@@ -491,6 +500,9 @@ ul li::before {
 
   .small-image-container img {
     max-width: 80%;
+  }
+  .about {
+    margin-top: 80px;
   }
 }
 
@@ -1496,7 +1508,7 @@ ul li::before {
 
 .experience-item {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   border: 2px solid #c9a66b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
