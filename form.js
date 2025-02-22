@@ -1,33 +1,39 @@
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", async function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevents page reload
 
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
 
-    try {
-      const response = await fetch("https://formspree.io/f/manqbblz", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const responseMessage = document.getElementById("response-message");
 
-      if (response.ok) {
-        document.getElementById("response-message").textContent =
-          "Message sent successfully!";
-        document.getElementById("contact-form").reset();
-      } else {
-        document.getElementById("response-message").textContent =
-          "Failed to send message. Try again.";
+      try {
+        const response = await fetch("https://formspree.io/f/xyzkvboe", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          responseMessage.textContent = "Message sent successfully!";
+          responseMessage.style.color = "green";
+          document.getElementById("contact-form").reset();
+        } else {
+          responseMessage.textContent = "Failed to send message. Try again.";
+          responseMessage.style.color = "red";
+        }
+      } catch (error) {
+        responseMessage.textContent = "An error occurred. Please try again.";
+        responseMessage.style.color = "red";
+      } finally {
+        console.log("Form submission attempt completed.");
       }
-    } catch (error) {
-      document.getElementById("response-message").textContent =
-        "An error occurred. Please try again.";
-    }
-  });
+    });
+});

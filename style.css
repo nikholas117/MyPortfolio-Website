@@ -382,7 +382,6 @@ ul li::before {
   display: block;
 }
 
-/* Responsive Adjustments (Only for smaller screens) */
 @media (max-width: 1025px) {
   .about {
     margin-top: -260px;
