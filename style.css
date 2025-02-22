@@ -113,16 +113,17 @@ nav img {
 .section {
   padding: 30px;
 }
+
 .hero {
   position: relative;
-  height: 100vh;
   display: flex;
+  min-height: 100vh; /* Changed from height to min-height for better responsiveness */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 85px;
+  padding: 4rem 2rem; /* Changed from fixed pixels to rem for better scaling */
   overflow: hidden;
   margin-bottom: -30px;
 }
@@ -138,63 +139,61 @@ nav img {
 }
 
 .image-container {
-  width: 75%;
+  width: 100%; /* Changed from 75% to be fully responsive */
+  max-width: 1200px; /* Added max-width for larger screens */
   max-height: 80vh;
   overflow: hidden;
   border-radius: 10px;
+  margin: 0 auto; /* Center the container */
 }
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   position: relative;
   display: block;
-}
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
 }
 
 .hero-text {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%; /* Added left positioning */
+  transform: translate(-50%, -50%); /* Updated transform for better centering */
   background: rgba(0, 0, 0, 0.6);
-  padding: 20px 45px;
+  padding: clamp(1rem, 3vw, 2.5rem); /* Responsive padding */
   border-radius: 10px;
   z-index: 2;
   border: 1px solid #c9a66b;
-  max-width: 550px;
+  max-width: 90%;
+  width: min(550px, 95%); /* More responsive width handling */
   text-align: center;
-  width: 90%;
-}
-
-.hero-text h1,
-.hero-text h2,
-.hero-text h4 {
-  margin: 5px;
-  padding: 8px;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
   font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.hero-text h2,
+.hero-text h4 {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .hero-text h4 {
-  font-size: 1.15rem;
-  margin-bottom: -2rem;
-  padding-top: 3rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  margin-bottom: -1rem;
+  padding-top: 1.5rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .socials {
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
@@ -203,7 +202,6 @@ nav img {
   gap: 15px;
   z-index: 3;
 }
-
 .socials a {
   font-size: 24px;
   color: white;
@@ -215,7 +213,6 @@ nav img {
   color: #c9a66b;
   transform: scale(1.2);
 }
-
 .footer {
   background: #4a3f35;
   color: white;
@@ -258,8 +255,80 @@ button:hover::after {
 
 .elegant-text {
   font-family: "Great Vibes", cursive;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   letter-spacing: 0.15em;
+}
+@media (max-width: 1025px) {
+  .image-container {
+    height: 50vh;
+    width: 70vh;
+  }
+}
+@media (max-width: 769px) {
+  .image-container {
+    height: 40vh;
+    width: 60vh;
+  }
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .socials {
+    position: relative;
+    left: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .hero-text {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-container {
+    height: 30vh;
+    width: 40vh;
+  }
+  .hero-text h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .hero {
+    margin-bottom: -230px;
+  }
+
+  .hero-text h4 {
+    font-size: 1rem;
+    margin-bottom: -0.5rem;
+    padding-top: 1rem;
+  }
+
+  .socials a {
+    font-size: 20px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 320px) {
+  .hero {
+    padding: 1rem 0.5rem;
+    margin-bottom: -200px;
+  }
+
+  .hero-text {
+    padding: 0.75rem;
+    margin-top: 20px;
+  }
 }
 
 /* General About Section Styling */
