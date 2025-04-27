@@ -626,6 +626,8 @@ ul li::before {
   text-align: center;
   color: #e0d6c5;
   border: 2.25px solid #c9a66b;
+  padding: 10px;
+  padding-top: 20px;
 }
 
 .skill-item .skill-icon {
@@ -641,6 +643,8 @@ ul li::before {
 .skill-name {
   font-size: 1.2rem;
   margin: 0;
+
+  text-align: center;
 }
 
 /* Theme wrapper styling projects */
@@ -903,6 +907,7 @@ ul li::before {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  gap: 10px;
 }
 
 .tech-icons img {
